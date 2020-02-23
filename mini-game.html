@@ -21,6 +21,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/js/mdb.min.js"></script>
+        
+<script src="javascript/logic.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/style.css">
         
@@ -44,23 +46,52 @@
             
             <p> Enter a number and a random number will be added to you input. Your goal is to get as close as you can to the target number without going over.</p>
 <!--            https://www.w3schools.com/tags/tag_input.asp-->
-            <form>
-            <label for="numberEnter">Enter number here:</label><input type="text" id="numberEnter" name="numberNumber"><br><br>
-            
-            <input type="submit" value="Submit">
-                
-            
-            
-            
-            </form>
-            
-        
-        
-        
-        </main>
-        
-        <br>
 
+            
+            
+            
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+
+        <div id="firstSection">
+        <p>First Number: <input type="text" id="startValue" value="5"></p>
+        
+                 
+            <button type="button" id="submitButton">Submit First Number</button>
+        </div>
+            
+        <br />
+        <div id="secondSection">
+        <button type="button" id="addNum"> Add</button>
+        &nbsp;
+        <button type="button" id="click"> Stop</button>
+        
+        <br />
+        
+        
+        
+        Player's Total: &nbsp;
+        <div id="currentNum">0</div>
+ 
+        Bot's Total: &nbsp;
+        <div id="botNum">0</div>
+            </div>
+    </div>
+    <div class="col-sm">
+      Your Numbers:
+        <hr />
+        <div id="yourNumbers"></div>
+ 
+    </div>
+    <div class="col-sm">
+      Bot Numbers:
+        <hr />
+    </div>
+  </div>
+</div>
+        </main>
+        <br>
             <footer>
                 <p>&copy; 2020 Adalida Lewis, all rights reserved</p>
             </footer>
