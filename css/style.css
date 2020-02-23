@@ -4,7 +4,7 @@ footer{
         font-style: italic;
         clear:both;
 }    
-h1{
+h1, h3{
     text-align: center;
 }
 table, th, td {
@@ -72,3 +72,4 @@ tr{
     clear:both;
     padding-left: 20px;
 }
+
