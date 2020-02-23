@@ -2,33 +2,33 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Google Fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" rel="stylesheet">
-        
-<link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" rel="stylesheet">
 
-<!-- JQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/js/mdb.min.js"></script>
-        
-<script src="javascript/logic.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 
-<link rel="stylesheet" type="text/css" href="css/style.css">
-        
-<title>Game</title> 
-        
-</head>  
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/js/mdb.min.js"></script>
+
+        <script src="javascript/logic.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <title>Game</title> 
+
+    </head>  
     <body>
         <nav>
             <div class="navigation">
@@ -38,62 +38,85 @@
                 <a href="index.html">Home</a>
             </div>        
         </nav>
-        
+
         <main>
-        
-            <h1>Play a Game of BlackJack!</h1>
-            <h4>How to play?</h4>
-            
-            <p> Enter a number and a random number will be added to you input. Your goal is to get as close as you can to the target number without going over.</p>
-<!--            https://www.w3schools.com/tags/tag_input.asp-->
+            <div class="container">
+                <h1>Play a Game of BlackJack!</h1>
+                <h4>How to play?</h4>
 
-            
-            
-            
-    <div class="container">
-  <div class="row">
-    <div class="col-sm">
+                <p> Enter a number and a random number will be added to you input. Your goal is to get as close as you can to the target number without going over.</p>
+                <!--            https://www.w3schools.com/tags/tag_input.asp-->
+                <hr /><br />
 
-        <div id="firstSection">
-        <p>First Number: <input type="text" id="startValue" value="5"></p>
-        
-                 
-            <button type="button" id="submitButton">Submit First Number</button>
-        </div>
-            
-        <br />
-        <div id="secondSection">
-        <button type="button" id="addNum"> Add</button>
-        &nbsp;
-        <button type="button" id="click"> Stop</button>
-        
-        <br />
-        
-        
-        
-        Player's Total: &nbsp;
-        <div id="currentNum">0</div>
- 
-        Bot's Total: &nbsp;
-        <div id="botNum">0</div>
+
+
+
+                <div class="row">
+                    <div class="col-sm">
+
+                        <div id="firstSection">
+                            <p>First Number: <input type="text" id="startValue" placeholder="Enter a number"></p>
+
+
+                            <button type="button" id="submitButton">Submit First Number</button>
+                        </div>
+
+                        <br />
+                        <div id="secondSection">
+                            <button type="button" id="addBtn"> Add</button>
+                            &nbsp;
+                            <button type="button" id="stopBtn"> Stop</button>     
+                            <br />
+                            Player's Total: &nbsp;
+                            <div id="currentNum">0</div>
+
+                            Bot's Total: &nbsp;
+                            <div id="botNum">0</div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        Your Numbers:
+                        <hr />
+                        <div id="yourNumbers"></div>
+
+                    </div>
+                    <div class="col-sm">
+                        Bot Numbers:
+                        <hr />
+                        <div id="botNumbers"></div>
+                    </div>
+                </div>
+                <hr />
+                <h3>Saves Results</h3>
+                <div class="row">
+                    <div class="col-sm">
+                        <h5>Your wins:</h5>
+                        <hr />
+                        <div id="playerWins">0</div>
+                    </div>    
+
+                    <div class="col-sm">
+                        <h5>Bot Wins:</h5>
+                        <hr />
+                        <div id="botWins">0</div>
+                    </div>  
+
+                </div>
+
+
+
+
+
+
+
+
+
+
             </div>
-    </div>
-    <div class="col-sm">
-      Your Numbers:
-        <hr />
-        <div id="yourNumbers"></div>
- 
-    </div>
-    <div class="col-sm">
-      Bot Numbers:
-        <hr />
-    </div>
-  </div>
-</div>
         </main>
         <br>
-            <footer>
-                <p>&copy; 2020 Adalida Lewis, all rights reserved</p>
-            </footer>
+        <footer>
+            <p>&copy; 2020 Adalida Lewis, all rights reserved</p>
+        </footer>
     </body> 
 </html>
