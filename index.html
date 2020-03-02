@@ -16,105 +16,101 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="css/style.css">        
-
-        <title>Home</title> 
-
+        <title>Home - Adalida Lewis</title> 
     </head>  
     <body>
-        <header>
-            <nav>
-                <div class="navigation">
-                    <img src="adalidaLewisLogo.png" class="logo" alt="Adalida Lewis Logo">
-                    <a href="mini-game.html">Game</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="index.html">Home</a>
-                </div>        
-            </nav>
-        </header>
-
-        <main class="contain">
-
-
-            <div id="left-block">
-                <article>
-                    <h1>About Me!</h1>
-                    <section>
-                        <h3>How I spend my time</h3>
-                        <ul>
-                            <li>Drawing</li>    
-                            <li>Video Games</li>
-                            <li>procrastinating</li>
-                        </ul>
-                    </section>
-                    <hr />     
-                    <section>
-                        <h3>Todays Schedule</h3>
-                        <ol>
-                            <li>Go to Typography I</li>
-                            <li>Finish Typography I assignment</li>
-                            <li>Procrastinate</li>
-                            <li>Finish Knacktive Situational Analysis</li>
-                            <li>Procrastinate</li>
-                            <li>Work on Dev Apps Assignment</li>
-
-                        </ol>     
-                    </section>
-                    <hr />   
-                    <section>
-
-                        <h3>Favorite Steam Games</h3>
-                        <!--Made using the tablegenerator.com-->
-                        <table>
-                            <tr>
-                                <th colspan="3">My Favorite Games</th>
-                            </tr>
-                            <tr>
-                                <td>Title</td>
-                                <td>Genre</td>
-                                <td>Hours</td>
-                            </tr>
-                            <tr>
-                                <td>Witcher 3</td>
-                                <td>RPG</td>
-                                <td>57</td>
-                            </tr>
-                            <tr>
-                                <td>Civ 5</td>
-                                <td>Strategy</td>
-                                <td>150</td>
-                            </tr>
-                        </table>  
-                        <br />
-                    </section>           
-                </article>
+        <!--https://getbootstrap.com/docs/4.0/components/navbar/-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="images/adalidaLewisLogo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html" ><h4>HOME</h4><span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><h4>CONTACT</h4></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mini-game.html"><h4>WEB APP</h4></a>
+                    </li>
+                </ul>
             </div>
-
-            <br />
-            <aside class="right-block">
-                <img src="sunFlowerPicture.jpg" id="myPhoto" alt="Me in Sunflowers">
-
-                <div class="float-right">
-                    <img src="ground-sunflower.jpg" id="sunflower" alt="Sunflower on the ground">
-                    <p>Photo taken by me</p>
+        </nav>
+        <main class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <article>
+                        <h1>About Me</h1>
+                        <section>
+                            <h3>How I spend my time</h3>
+                            <ul>
+                                <li>Drawing</li>    
+                                <li>Video Games</li>
+                                <li>Reading</li>
+                            </ul>
+                        </section>
+                        <section >
+                            <h3>Todays Schedule</h3>
+                            <ol>
+                                <li>G to Typography I</li>
+                                <li>Finish Typography I assignment</li>
+                                <li>Finish Knacktive Situational Analysis</li>
+                                <li>Work on Dev Apps Assignment</li>
+                            </ol>     
+                        </section>
+                        <section>
+                            <h3>Favorite Steam Games</h3>
+                            Made using the tablegenerator.com
+                            <table>
+                                <tr >
+                                    <th colspan="3">My Favorite Games</th>
+                                </tr>
+                                <tr>
+                                    <td>Title</td>
+                                    <td>Genre</td>
+                                    <td>Hours</td>
+                                </tr>
+                                <tr>
+                                    <td>Witcher 3</td>
+                                    <td>RPG</td>
+                                    <td>57</td>
+                                </tr>
+                                <tr>
+                                    <td>Civ 5</td>
+                                    <td>Strategy</td>
+                                    <td>150</td>
+                                </tr>
+                            </table>  
+                            <br />
+                        </section>  
+                    </article>
                 </div>
+                <div class="col-lg-6">
+                    <aside>
+                        <img src="sunFlowerPicture.jpg" id="myPhoto" alt="Me in Sunflowers">
 
-                <div>  
-                    <a href="https://www.facebook.com/adalida58"><img src="facebookLogo.png" class="social" alt="Facebook Logo"></a>
-                    <a href="https://github.com/Adalida-Lewis"><img src="githubLogo.png" class="social" alt="GitHub Logo"></a>
-                    <a href="https://www.linkedin.com/in/adalidalewis/"><img src="linkedInLogo.png" class="social" alt="LinkedInLogo"></a>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique erat magna, et cursus tellus luctus in. Donec aliquam risus ac neque porta, sit amet iaculis tortor fermentum. Sed semper dui sit amet gravida eleifend. Proin porttitor nisl in ex vehicula egestas. Morbi ullamcorper libero ut neque efficitur, sed tempor sapien tempus. Morbi dapibus tellus sed tortor congue, vitae posuere risus viverra. Donec scelerisque risus orci, ut eleifend felis ornare a. Nunc auctor gravida cursus. Curabitur nec finibus velit. Duis dolor sapien, euismod ac posuere eu, eleifend ac justo. Cras tempor turpis non nulla accumsan tempus. Cras id urna ut lacus elementum malesuada. Aliquam ante nisl, ullamcorper ut ligula sit amet, maximus pellentesque libero.
-                    </p>
+                        <div class="float-right">
+                            <img src="ground-sunflower.jpg" id="sunflower" alt="Sunflower on the ground">
+                            <p>Photo taken by me</p>
+                        </div>
+                        <div>  
+                            <a href="https://www.facebook.com/adalida58"><img src="facebookLogo.png" class="social" alt="Facebook Logo"></a>
+                            <a href="https://github.com/Adalida-Lewis"><img src="githubLogo.png" class="social" alt="GitHub Logo"></a>
+                            <a href="https://www.linkedin.com/in/adalidalewis/"><img src="linkedInLogo.png" class="social" alt="LinkedInLogo"></a>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique erat magna, et cursus tellus luctus in. Donec aliquam risus ac neque porta, sit amet iaculis tortor fermentum. Sed semper dui sit amet gravida eleifend. Proin porttitor nisl in ex vehicula egestas. Morbi ullamcorper libero ut neque efficitur, sed tempor sapien tempus. Morbi dapibus tellus sed tortor congue, vitae posuere risus viverra. Donec scelerisque risus orci, ut eleifend felis ornare a. Nunc auctor gravida cursus. Curabitur nec finibus velit. Duis dolor sapien, euismod ac posuere eu, eleifend ac justo. Cras tempor turpis non nulla accumsan tempus. Cras id urna ut lacus elementum malesuada. Aliquam ante nisl, ullamcorper ut ligula sit amet, maximus pellentesque libero.
+                            </p>
+                        </div>
+                        <iframe style="border: 0;" width="345" height="194" src="https://www.youtube.com/embed/DvwS7cV9GmQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </aside>
                 </div>
-                <iframe style="border: 0;" width="690" height="388" src="https://www.youtube.com/embed/DvwS7cV9GmQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </aside>
-
-
-
+            </div>
         </main>
         <footer>
             <p>&copy; 2020 Adalida Lewis, all rights reserved</p>        
         </footer>
-    </body> 
+    </body>
 </html>
