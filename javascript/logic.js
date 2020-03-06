@@ -9,31 +9,42 @@ $(document).ready(function(){
     let playerHold = 0;
     let botHolding = false;
     let playerHolding = false;
+    let sessionBotNum = localStorage.getItem('counter');
+    $("#result").html(sessionBotNum);
+    let sessionPlayerNum = localStorage.getItem('playerCounter');
+    $("#playerFinal").html(sessionPlayerNum);
+
 
     //Hides Add and Stop Buttons on load
     $("#secondSection").hide();
     $("#rules").hide();
 
-    document.getElementById("rulesButton").addEventListener("click", function(){
-        $("#rules").toggle();
-        botStorage();
+    window.addEventListener('load', (event) => {
+        document.querySelector("#fname").innerHTML = localStorage.getItem('botStorageNum'); 
+        localStorage.getItem('playerStorageNum');
     })
-
+    
+    
     document.getElementById("stopBtn").addEventListener("click",function(){
         alert("You have chose to hold at "+playerTotal);
-        playerHold++;
+        playerHolding = true;
         $("#addBtn").hide();
         $("#stopBtn").hide();
         if(playerTotal >= botTotal){
-
-
-
-
             botTurn();
+            console.log("Bot hold turn");
             if(botTotal > 52){
                 alert("The Bot has busted! You have won with "+ playerTotal);
                 console.log("Bot has busted");
                 finalPlayer++;
+                if (sessionPlayerNum === null) {
+                    sessionPlayerNum = 0;
+                } 
+                else 
+                {
+                    sessionPlayerNum++;
+                }
+                localStorage.setItem("playerCounter", sessionPlayerNum);
 
 
 
@@ -50,23 +61,63 @@ $(document).ready(function(){
                 console.log("Player lost to bot");
                 finalBot++;
                 $("#botFinal").html(finalBot);
+                if (sessionBotNum === null) {
+                    sessionBotNum = 0;
+                } else {
+                    sessionBotNum++;
+                }
+                localStorage.setItem("counter", sessionBotNum);
+
+
+
             }
             if(botTotal == 52 && playerTotal==52){
                 alert("It is a tie! Score is: "+botTotal);
-                console.log("Wow! Both lost because of a tie of 52!");
+                console.log("Wow! Both lost because of a tie of 52! No one wins!");
             }
         }   
     })
 
-    function botTurn(){
+//    function botTurn(){
+//        botholder = randomGen();
+//        if(playerHolding != false){
+//        if(botTotal >= 48 && botTotal <=52){
+//            if(botHolding != true){
+//
+//                    console.log("The bot will hold because it is close to break");
+//                    alert("Bot is holding their number is: "+botTotal);
+//                    botHolding = true;
+//                }
+//            }
+//        }
+//        else{
+//            $("#botNumbers").append(botholder + "<br />");
+//            botTotal += botholder;
+//            $("#botNum").html(botTotal);
+//            if(botTotal > 52){
+//                alert("The bot has busted! You win with " + playerTotal);
+//                console.log("The bot has busted. Player has won");
+//                playerTotal++;
+//                $("#playerFinal").html(finalBot);
+//
+//
+//
+//
+//
+//            }
+//        }       
+//    }
+    
+     function botTurn(){
         botholder = randomGen();
         if(botTotal >= 48 && botTotal <=52){
-            if(playerHold == 0){
+            if(playerHolding != true){
                 if(botHolding == false){
 
                     console.log("The bot will hold because it is close to break");
                     alert("Bot is holding their number is: "+botTotal);
                     botHolding = true;
+                    
                 }
             }
         }
@@ -79,6 +130,15 @@ $(document).ready(function(){
                 console.log("The bot has busted. Player has won");
                 playerTotal++;
                 $("#playerFinal").html(finalBot);
+                
+                if (sessionPlayerNum === null) {
+                    sessionPlayerNum = 0;
+                } 
+                else 
+                {
+                    sessionPlayerNum++;
+                }
+                localStorage.setItem("playerCounter", sessionPlayerNum);
             }
         }       
     }
@@ -93,6 +153,22 @@ $(document).ready(function(){
             console.log("Player has busted");
             finalBot++;
             $("#botFinal").html(finalBot);
+            if (sessionBotNum === null) {
+                sessionBotNum = 0;
+            } else {
+                sessionBotNum++;
+            }
+            localStorage.setItem("counter", sessionBotNum);
+
+
+
+
+
+
+
+
+
+
         }
         if(playerTotal <= 52){
             botTurn();
@@ -120,16 +196,16 @@ $(document).ready(function(){
         return Math.round(randomNum);
     }
 
-    function botStorage(){
-        if (typeof(Storage) !== "undefined") {
-            // Store
-            localStorage.setItem("lastname", finalBot++ );
-            // Retrieve
-            document.getElementById("botFinal").innerHTML = localStorage.getItem("lastname");
-        } else {
-            document.getElementById("botFinal").innerHTML = "Sorry, your browser does not support Web Storage...";
-        }
-    }
+    //    function botStorage(){
+    //        if (typeof(Storage) !== "undefined") {
+    //            // Store
+    //            localStorage.setItem("lastname", finalBot++ );
+    //            // Retrieve
+    //            document.getElementById("botFinal").innerHTML = localStorage.getItem("lastname");
+    //        } else {
+    //            document.getElementById("botFinal").innerHTML = "Sorry, your browser does not support Web Storage...";
+    //        }
+    //    }
 
 
 });

@@ -42,28 +42,16 @@
         <main class="container">
 
             <h1>Play a Game of Fifty-Two</h1>
-            <h4>How to play?</h4>
-            <button type="button" id="rulesButton">Show/Hide Rules</button>
-            <div id="rules">
-                <p> Enter a starting number that is between the values of 1 and 10.</p>
-                <p>Continue to click the add button until you are close to the number 52.</p>
-                <p>Keep an eye on your number! The add button can generate a number between 1 and 10.</p>
-                <p>Click the hold button when you are close.</p>
-                <p>Keep in mind the Bot can also hold and getting a tie does not mean a win.</p>
-                <p>Good Luck! Have Fun!</p>
+
+
+            <div id="demo">
+                <h4>How to play?</h4>
+                <button type="button" onclick="loadRules()">Show the Rules</button>
             </div>
+
             <hr /><br />
-            
-<!--
-            <div id="outputBox">
-                     <p id="output">Hello! There</p>   
-            
-            
-            </div>
-            <br />
--->
-            
-            
+
+
             <div class="row">
                 <div class="col-lg-4">
 
@@ -78,13 +66,13 @@
                     <div id="secondSection">
                         <button type="button" id="addBtn"> Add</button>
                         &nbsp;
-                        <button type="button" id="stopBtn"> Stop</button>     
+                        
                         <br />
                         Player's Total: &nbsp;
                         <div id="currentNum">0</div>
 
                         Bot's Total: &nbsp;
-                        
+
                         <div id="botNum">0</div>
                     </div>
 
@@ -96,7 +84,6 @@
                     <hr />
                     <div class="outputBox" id="yourNumbers"></div>
 
-
                 </div>
                 <div class="col-lg-4">
                     Bot Numbers:
@@ -106,7 +93,7 @@
             </div>
             <h4>History</h4>
             <div class="row">
-                
+
                 <hr />
                 <div class="col-lg-6">
                     <h6 class="center">Player Wins</h6>
@@ -116,7 +103,7 @@
                 <div class="col-lg-6">
                     <h6 class="center">Bot Wins</h6>
                     <hr />
-                    <p class="center" id="botFinal">0</p>
+                    <p class="center" id="result">0</p>
                 </div>
 
             </div>
@@ -125,6 +112,19 @@
         <footer>
             <p>&copy; 2020 Adalida Lewis, all rights reserved</p>        
         </footer>
-        <script src="javascript/logic.js"></script>
+        <script src="javascript/test.js"></script>
+        <script>
+            function loadRules() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("demo").innerHTML =
+                            this.responseText;
+                    }
+                };
+                xhttp.open("GET", "rules.txt", true);
+                xhttp.send();
+            }
+        </script>
     </body>
 </html>
