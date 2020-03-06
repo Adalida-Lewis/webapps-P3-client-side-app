@@ -80,7 +80,7 @@ $(document).ready(function (){
             console.log("Bot has busted");
             finalBot++;
             $("#botFinal").html(finalBot);
-            return(alert("The bot has lost with " + botTotal));
+            alert("The bot has lost with " + botTotal);
             if (sessionPlayerNum === null) {
                 sessionPlayerNum = 0;
             } else {
