@@ -30,26 +30,6 @@ nav div ul li a{
 .center{
     text-align: center;
 }
-/*
-
-.navigation{
-        background-color: pink;
-        padding-left: 10px;
-}
-.navigation a{
-        float: right;
-        padding-right: 20px;
-        padding-top: 10px;
-        font-size: 20px;
-        text-decoration: none;
-        color: darkslategrey;
-        font-style: oblique;
-        font-weight: bold;
-}       
-.navigation a:hover{
-        color: navajowhite;
-}
-*/
 .contain{
     padding-left: 20px;
     padding-right: 20px;
@@ -75,45 +55,17 @@ nav div ul li a{
 #sunflower{
     height: 150px;
 }
-/*
-.logo{
-    height: 50px;
-}
-*/
-
 .social{
     height:50px;
     padding-bottom: 20px;
     clear:both;
     padding-left: 20px;
 }
-/*
-.jumbotron{
-    height: 10em;
-    background-color: pink !important;
-    margin-bottom: 0;
-}
-*/
 .logo{
     height: 5em;
     float: left;
 }
-/*
-div nav ul li{
-    padding-left: 1em;
+.outputBox{
+    background-color: lightgrey;
+    
 }
-div nav ul li a{
-    color: darkslategrey;
-    font-family: fantasy;
-    font-size: 2em;
-}
-div nav ul li a:hover{
-    color: darkgrey;
-}
-div nav ul li a:active{
-    color: goldenrod;
-}
-div nav ul li a{
-    text-decoration: none;
-}
-*/

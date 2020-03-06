@@ -45,14 +45,25 @@
             <h4>How to play?</h4>
             <button type="button" id="rulesButton">Show/Hide Rules</button>
             <div id="rules">
-            <p> Enter a starting number that is between the values of 1 and 10.</p>
-            <p>Continue to click the add button until you are close to the number 52.</p>
-            <p>Keep an eye on your number! The add button can generate a number between 1 and 10.</p>
-            <p>Click the hold button when you are close.</p>
-            <p>Keep in mind the Bot can also hold and getting a tie does not mean a win.</p>
-            <p>Good Luck! Have Fun!</p>
-                </div>
+                <p> Enter a starting number that is between the values of 1 and 10.</p>
+                <p>Continue to click the add button until you are close to the number 52.</p>
+                <p>Keep an eye on your number! The add button can generate a number between 1 and 10.</p>
+                <p>Click the hold button when you are close.</p>
+                <p>Keep in mind the Bot can also hold and getting a tie does not mean a win.</p>
+                <p>Good Luck! Have Fun!</p>
+            </div>
             <hr /><br />
+            
+<!--
+            <div id="outputBox">
+                     <p id="output">Hello! There</p>   
+            
+            
+            </div>
+            <br />
+-->
+            
+            
             <div class="row">
                 <div class="col-lg-4">
 
@@ -73,6 +84,7 @@
                         <div id="currentNum">0</div>
 
                         Bot's Total: &nbsp;
+                        
                         <div id="botNum">0</div>
                     </div>
 
@@ -82,15 +94,31 @@
 
                     Your Numbers:
                     <hr />
-                    <div id="yourNumbers"></div>
+                    <div class="outputBox" id="yourNumbers"></div>
 
 
                 </div>
                 <div class="col-lg-4">
                     Bot Numbers:
                     <hr />
-                    <div id="botNumbers"></div>
+                    <div class="outputBox" id="botNumbers"></div>
                 </div>
+            </div>
+            <h4>History</h4>
+            <div class="row">
+                
+                <hr />
+                <div class="col-lg-6">
+                    <h6 class="center">Player Wins</h6>
+                    <hr />
+                    <p class="center" id="playerFinal">0</p>
+                </div>
+                <div class="col-lg-6">
+                    <h6 class="center">Bot Wins</h6>
+                    <hr />
+                    <p class="center" id="botFinal">0</p>
+                </div>
+
             </div>
 
         </main>
