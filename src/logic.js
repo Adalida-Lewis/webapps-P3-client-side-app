@@ -18,11 +18,13 @@ $(document).ready(function(){
     $("#rules").hide();
 
     $("#submitButton").click(function(){
-        submitFirst();
+        let firstNumber = $("#startValue").val();
+        submitFirst(firstNumber);
     })
 
     $("#addBtn").click(function(){
-        addingNums()
+        let playerHolder = randomGen();
+        addingNums(playerHolder);
     })    
 
     function randomGen(){
@@ -30,9 +32,15 @@ $(document).ready(function(){
         return Math.round(randomNum);
     }
 
-    function submitFirst(){
+    function submitFirst(num2){
+        if(num2 >= 10){
+            return "Error Number is greater than 10";
+        }
+        if(num2 < 0){
+            return "Error Number is less than 0";
+        }
         console.log("Valid starting input. The game has started.");
-        let firstNumber = $("#startValue").val();
+        
         if(firstNumber >= 1 && firstNumber <= 10){
             $("#yourNumbers").append(firstNumber + "<br>");
             playerTotal += parseInt(firstNumber);
@@ -46,11 +54,13 @@ $(document).ready(function(){
             alert("Invalid Input! Please enter a number between 1 - 10");
         }
     }
-    
-    function addingNums(){
-        let playerHolder = randomGen();
-        $("#yourNumbers").append(playerHolder + "<br />");
-        playerTotal += playerHolder;
+
+    function addingNums(num1){
+
+        
+
+        $("#yourNumbers").append(num1 + "<br />");
+        playerTotal += num1;
         $("#currentNum").html(playerTotal);
         if(playerTotal >= 52){
             alert("Busted! The bot has won with " + botTotal);
@@ -67,12 +77,11 @@ $(document).ready(function(){
         else{
             botTurn();
         } 
-
         if(botTotal >= 52){
-            alert("The bot has lost with " + botTotal);
             console.log("Bot has busted");
             finalBot++;
             $("#botFinal").html(finalBot);
+            return(alert("The bot has lost with " + botTotal););
             if (sessionPlayerNum === null) {
                 sessionPlayerNum = 0;
             } else {
@@ -89,10 +98,17 @@ $(document).ready(function(){
         botTotal += botholder;
         $("#botNum").html(botTotal);
     }
-
-
-
-
-
+    
+    function checkValue(num3){
+        if(num < 10){
+            return 0;
+        }
+        if(num >= 10){
+            return 1;
+        }
+        if(num >=0){
+            return 0;
+        }
+    }
 
 });
