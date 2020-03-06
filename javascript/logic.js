@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function (){
     //global variables
     let playerTotal = 0;
     let botTotal = 0;
@@ -18,8 +18,8 @@ $(document).ready(function(){
     $("#rules").hide();
 
     $("#submitButton").click(function(){
-        let firstNumber = $("#startValue").val();
-        submitFirst(firstNumber);
+        
+        submitFirst();
     })
 
     $("#addBtn").click(function(){
@@ -32,13 +32,14 @@ $(document).ready(function(){
         return Math.round(randomNum);
     }
 
-    function submitFirst(num2){
-        if(num2 >= 10){
-            return "Error Number is greater than 10";
-        }
-        if(num2 < 0){
-            return "Error Number is less than 0";
-        }
+    function submitFirst(){
+        let firstNumber = $("#startValue").val();
+//        if(num2 >= 10){
+//            return "Error Number is greater than 10";
+//        }
+//        if(num2 < 0){
+//            return "Error Number is less than 0";
+//        }
         console.log("Valid starting input. The game has started.");
         
         if(firstNumber >= 1 && firstNumber <= 10){
@@ -56,8 +57,6 @@ $(document).ready(function(){
     }
 
     function addingNums(num1){
-
-        
 
         $("#yourNumbers").append(num1 + "<br />");
         playerTotal += num1;
@@ -81,7 +80,7 @@ $(document).ready(function(){
             console.log("Bot has busted");
             finalBot++;
             $("#botFinal").html(finalBot);
-            return(alert("The bot has lost with " + botTotal););
+            return(alert("The bot has lost with " + botTotal));
             if (sessionPlayerNum === null) {
                 sessionPlayerNum = 0;
             } else {

@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <link rel="stylesheet" type="text/css" href="css/style.css">        
-        <title>Fifty-Four - Adalida Lewis</title> 
+        <title>Fifty-Two - Adalida Lewis</title> 
     </head>  
     <body>
         <!--https://getbootstrap.com/docs/4.0/components/navbar/-->
@@ -41,11 +41,17 @@
         </nav>
         <main class="container">
 
-            <h1>Play a Game of BlackJack!</h1>
-            <h4>How to play?</h4>
+            <h1>Play a Game of Fifty-Two</h1>
 
-            <p> Enter a number and a random number will be added to you input. Your goal is to get as close as you can to the target number without going over.</p>
+
+            <div id="demo">
+                <h4>How to play?</h4>
+                <button type="button" onclick="loadRules()">Show the Rules</button>
+            </div>
+
             <hr /><br />
+
+
             <div class="row">
                 <div class="col-lg-4">
 
@@ -60,12 +66,13 @@
                     <div id="secondSection">
                         <button type="button" id="addBtn"> Add</button>
                         &nbsp;
-                        <button type="button" id="stopBtn"> Stop</button>     
+                        
                         <br />
                         Player's Total: &nbsp;
                         <div id="currentNum">0</div>
 
                         Bot's Total: &nbsp;
+
                         <div id="botNum">0</div>
                     </div>
 
@@ -75,21 +82,49 @@
 
                     Your Numbers:
                     <hr />
-                    <div id="yourNumbers"></div>
-
+                    <div class="outputBox" id="yourNumbers"></div>
 
                 </div>
                 <div class="col-lg-4">
                     Bot Numbers:
                     <hr />
-                    <div id="botNumbers"></div>
+                    <div class="outputBox" id="botNumbers"></div>
                 </div>
+            </div>
+            <h4>History</h4>
+            <div class="row">
+
+                <hr />
+                <div class="col-lg-6">
+                    <h6 class="center">Player Wins</h6>
+                    <hr />
+                    <p class="center" id="playerFinal">0</p>
+                </div>
+                <div class="col-lg-6">
+                    <h6 class="center">Bot Wins</h6>
+                    <hr />
+                    <p class="center" id="result">0</p>
+                </div>
+
             </div>
 
         </main>
         <footer>
             <p>&copy; 2020 Adalida Lewis, all rights reserved</p>        
         </footer>
-        <script src="javascript/logic.js"></script>
+        <script src="javascript/test.js"></script>
+        <script>
+            function loadRules() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("demo").innerHTML =
+                            this.responseText;
+                    }
+                };
+                xhttp.open("GET", "rules.txt", true);
+                xhttp.send();
+            }
+        </script>
     </body>
 </html>
