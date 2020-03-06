@@ -4,8 +4,4 @@ Continue to click the add button until you are close to the number 52.
 
 Keep an eye on your number! The add button can generate a number between 1 and 10.
 
-Click the hold button when you are close.
-
-Keep in mind the Bot can also hold and getting a tie does not mean a win.
-
 Good Luck! Have Fun!
